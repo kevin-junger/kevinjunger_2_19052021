@@ -6,29 +6,56 @@ body{
     display: flex;
     flex-direction: column;
 }
-.rooms{
+#rooms{
     display: flex;
+    flex-flow: nowrap;
 }
 .r-search{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 2;
 }
 .r-search > .r-search-results{
+    display: flex;
+    flex-wrap: wrap;
+}
+.r-search > .r-search-results > div{
     flex: 1 1 30%;
 }
-.r-search > .r-search-results > img{
-    width: 100%;
+.r-search > .r-search-results > div > img{
+    width: 90%;
 }
 .r-popular{
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 .r-popular > .r-popular-results{
-    flex: 1 1 90%;
-}
-.r-popular > .r-popular-results > img{
-    width: 100%;
-}
-.activities{
     display: flex;
+    flex-direction: column;
+}
+.r-popular > .r-popular-results > div{
+    flex: 1 1 90%;
+    display: flex;
+}
+.r-popular > .r-popular-results > div > img{
+    width: 25%;
+}
+.r-popular > .r-popular-results > div > div{
+    display: flex;
+    flex-direction: column;
+}
+#activities{
+    display: flex;
+    flex-direction: column;
+}
+.activities > .a-results{
+    display: flex;
+    flex-flow: wrap;
+}
+.activities > .a-results > div{
+    flex: 1 1 25%;
+}
+.activities > .a-results > div > img{
+    width: 90%;
 }
