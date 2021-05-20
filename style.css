@@ -6,7 +6,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.wrapper{
+main{
     display: flex;
     flex-direction: column;
 }
