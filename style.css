@@ -1,68 +1,104 @@
-body{
-    display: flex;
-    flex-direction: column;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
 }
 header{
+    padding: 2.5rem;
     display: flex;
     justify-content: space-between;
 }
-main{
+nav{
+    width: 25vw;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+nav a{
+    text-decoration: none;
+}
+main{
+	display: flex;
+    justify-content: space-between;
 }
 #rooms{
-    display: flex;
-    flex-flow: nowrap;
+	margin: 2rem;
+	padding: 2rem;
+	background-color: #F2F2F2;
+	border-radius: 20px;
+	width: 80vw;
 }
-.r-search{
-    display: flex;
-    flex-direction: column;
-    flex: 2;
+#rooms h2{
+	margin-bottom: 2rem;
 }
 .r-search-results{
-    display: flex;
-    flex-wrap: wrap;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: repeat(3,1fr);
+	height: 60vh;
 }
 .r-result{
-    flex-basis: 30%;
+	outline: 5px solid white;
+	border-radius: 20px;
+	background-color: white;
+	overflow: hidden;
+	box-shadow: 0px 5px 10px grey;
 }
-.r-result > img{
-    width: 80%;
-    height: 50%;
-    object-fit: cover;
+.r-result img{
+	height: 60%;
+	width: 100%;
+	object-fit: cover;
 }
-.r-popular{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.r-result figcaption{
+	padding: 1rem;
+	background-color: white;
 }
-.r-popular-results{
-    display: flex;
-    flex-direction: column;
+.r-result figcaption *{
+	background-color: white;
 }
-.r-p-result{
-    display: flex;
+.r-result figcaption .rating{
+	margin-top: 0.4rem;
 }
-.r-p-result > img{
-    width: 25%;
-    height: 50%;
-    object-fit: cover;
+.popular{
+	margin: 2rem;
+	padding: 2rem;
+	background-color: #F2F2F2;
+	border-radius: 20px;
+	width: 30vw;
 }
-.r-p-result > div{
-    display: flex;
-    flex-direction: column;
+.popular h2{
+	margin-bottom: 2rem;
 }
-#activities{
-    display: flex;
-    flex-direction: column;
+.popular section{
+	display: grid;
+	gap: 1.2rem;
+	grid-template-rows: repeat(3,1fr);
+	height: 60vh;
 }
-.a-results{
-    display: flex;
-    flex-flow: wrap;
+.popular section figure{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	outline: 5px solid white;
+	border-radius: 20px;
+	background-color: white;
+	overflow: hidden;
+	box-shadow: 0px 5px 10px grey;
 }
-.a-results > div{
-    flex: 25%;
+.popular section figure img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
-.a-results > div > img{
-    width: 90%;
+.popular section figure figcaption{
+	margin: 1rem;
+}
+.popular section figure figcaption .rating{
+	margin-top: 1rem;
+}
+.rating > #blue{
+	color: #0065fc;
+}
+.rating > #grey{
+	color: #deebff;
 }
