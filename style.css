@@ -6,18 +6,91 @@
 	font-family: 'Raleway', sans-serif;
 }
 nav{
-    padding: 2.5rem;
+	margin: 3rem 3rem;
     display: flex;
     justify-content: space-between;
 }
 .links{
-    width: 25vw;
+    width: 30%;
     display: flex;
     justify-content: space-between;
 }
 .links a{
     text-decoration: none;
     margin-top: 1rem;;
+}
+header{
+	margin: 1rem 3rem;
+}
+header h1{
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+header .search{
+	width: 25%;
+	display: flex;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+header .search input{
+	width: 100%;
+	border: 1px solid #f2f2f2;
+	border-left: none;
+	border-right: none;
+	padding: 0.8rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: black;
+}
+header .search .geo-btn{
+	border: 1px solid #f2f2f2;
+	background-color: #f2f2f2;
+	border-radius: 10px 0 0 10px;
+	padding: 0.8rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+header .search .search-btn{
+	border: 1px solid #0065fc;
+	background-color: #0065fc;
+	border-radius: 0 10px 10px 0;
+	padding: 0.8rem;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: white;
+}
+header .filters{
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+header .filters ul{
+	display: flex;
+	list-style-type: none;
+	margin-left: 0.5rem;
+}
+header .filters ul li{
+	display: flex;
+	align-items: center;
+	margin-left: 1rem;
+	border: 2px solid #deebff;
+	border-radius: 30px;
+}
+header .filters ul li p{
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+header .filters ul li div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #deebff;
+	color: #0065fc;
+	height: 50px;
+	width: 50px;
+	padding: 1rem;
+	border-radius: 30px;
 }
 main{
 	display: flex;
