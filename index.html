@@ -16,7 +16,7 @@
             <div class="links">
                 <a href="#rooms">Hébergements</a>
                 <a href="#activities">Activités</a>
-                <a href=""><strong>S'inscrire</strong></a>
+                <a href="" class="signup"><strong>S'inscrire</strong></a>
             </div>
         </nav>
         <header>
@@ -24,7 +24,7 @@
             <p>En plein centre-ville ou en pleine nature</p>
             <div class="search">
                 <button type="button" class="geo-btn"><i class="fas fa-map-marker-alt"></i></button>
-                <input type="text" />
+                <input type="text" placeholder="Marseille, France"/>
                 <button type="submit" class="search-btn">Rechercher</button>
             </div>
             <div class="filters">
@@ -36,7 +36,7 @@
                     <li><div><i class="fas fa-dog"></i></div><p>Animaux autorisés</p></li>
                 </ul>
             </div>
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            <p><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
         </header>
         <main>
             <article id="rooms">
@@ -127,9 +127,10 @@
                         </figcaption>
                     </figure>
                 </section>
+                <p>Afficher plus</p>
             </article>
             <aside class="popular">
-                <h2>Les plus populaires</h2>
+                <h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
                 <section>
                     <figure>
                         <img src="assets/img/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
@@ -178,7 +179,7 @@
             <article id="activities">
                 <h2>Activités à Marseille</h2>
                 <section>
-                    <figure>
+                    <figure class="3r">
                         <img src="assets/img/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
                         <figcaption>
                             <h3>Vieux Port</h3>
@@ -219,26 +220,28 @@
         </main>
         <footer>
             <div>
-                <p>A propos</p>
-                <ul>
-                    <li>Fonctionnement du site</li>
-                    <li>Conditions générales de vente</li>
-                    <li>Données et confidentialité</li>
-                </ul>
-            </div>
-            <div>
-                <p>Nos hébergements</p>
-                <ul>
-                    <li>Charte qualité</li>
-                    <li>Soumettre votre hôtel</li>
-                </ul>
-            </div>
-            <div>
-                <p>Assistance</p>
-                <ul>
-                    <li>Centre d'aide</li>
-                    <li>Nous contacter</li>
-                </ul>
+                <div>
+                    <p>A propos</p>
+                    <ul>
+                        <li>Fonctionnement du site</li>
+                        <li>Conditions générales de vente</li>
+                        <li>Données et confidentialité</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Nos hébergements</p>
+                    <ul>
+                        <li>Charte qualité</li>
+                        <li>Soumettre votre hôtel</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Assistance</p>
+                    <ul>
+                        <li>Centre d'aide</li>
+                        <li>Nous contacter</li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </body>
