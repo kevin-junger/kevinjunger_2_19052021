@@ -269,24 +269,19 @@ aside h2{
 }
 footer{
 	background-color: #f2f2f2;
+	padding: 3rem 3rem 2rem;
 	margin-top: 3rem;
-	padding: 3rem 3rem;
-}
-footer > div{
-	max-width: 1440px;
-	margin: 0 auto;
-	padding: 0 3rem;
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-}
-footer p{
-	font-weight: 700;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
 }
 footer ul{
-	list-style-type: none;
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
 }
-footer ul li{
-	margin-top: 0.8rem;
+footer li{
+	list-style: none;
+	margin-bottom: 1rem;
+}
+footer li:nth-child(1){
+	font-weight: 700;
+	margin-bottom: 1.5rem;
 }
