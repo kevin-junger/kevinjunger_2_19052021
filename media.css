@@ -85,21 +85,44 @@
         grid-template-rows: repeat(6,1fr);
     }
     .search-results figure{
-        height: 300px;
+        height: 200px;
     }
     .search-results img{
-        height: 72%;
+        height: 60%;
     }
     #activities{
         margin: 1rem 2rem;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 660px){
     nav{
-        flex-direction: column;
+        padding: 0 0 1rem 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "logo signup";
     }
-}
-@media screen and (max-width: 600px){
+    svg{
+        padding-left: 2rem;
+    }
+    #logo{
+        grid-area: logo;
+    }
+    .anchor{
+        padding-bottom: 1rem;
+        border-top: none;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    .anchor:hover{
+        border-top: none;
+        color: #0065fc;
+        border-bottom: 2px solid #0065fc;
+    }
+    #signup{
+        grid-area: signup;
+        text-align: right;
+        padding-right: 2rem;
+    }
     #activities article{
         height: 1500px;
         grid-template-areas: 
@@ -113,7 +136,4 @@
     #activities figure img{
         height: 75% !important;
     }
-}
-@media screen and (max-width: 510px) {
-    
 }
