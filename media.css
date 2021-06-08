@@ -23,47 +23,13 @@
 }
 @media screen and (max-width: 1200px) {
     #activities article{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
+        height: 500px;
+        grid-template-areas:
+            "act-1 act-2 act-3"
+            "act-4 act-5 act-6";
     }
-   #activities figure:nth-child(1){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    #activities figure:nth-child(2){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    #activities figure:nth-child(3){
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    #activities figure:nth-child(4){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #activities figure:nth-child(5){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #activities figure:nth-child(6){
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #activities figure img{
-        height: 70% !important;
+    #activities img{
+        height: 76% !important;
     }
 }
 @media screen and (max-width: 950px) {
@@ -85,48 +51,14 @@
         grid-template-columns: 1fr 2fr;
     }
     #activities article{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-        height: 650px;
-    }
-    #activities figure:nth-child(1){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    #activities figure:nth-child(2){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    #activities figure:nth-child(3){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #activities figure:nth-child(4){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #activities figure:nth-child(5){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    #activities figure:nth-child(6){
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
+        height: 700px;
+        grid-template-areas: 
+            "act-1 act-2"
+            "act-3 act-4"
+            "act-5 act-6";
     }
     #activities figure img{
-        height: 70% !important;
+        height: 73% !important;
     }
     footer{
         padding-top: 2rem;
@@ -169,45 +101,14 @@
 }
 @media screen and (max-width: 600px){
     #activities article{
-        grid-template-columns: auto;
-        grid-template-rows: repeat(6,1fr);
         height: 1500px;
-    }
-    #activities figure:nth-child(1){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    #activities figure:nth-child(2){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    #activities figure:nth-child(3){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    #activities figure:nth-child(4){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 4;
-        grid-row-end: 5;
-    }
-    #activities figure:nth-child(5){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 5;
-        grid-row-end: 6;
-    }
-    #activities figure:nth-child(6){
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 6;
-        grid-row-end: 7;
+        grid-template-areas: 
+            "act-1"
+            "act-2"
+            "act-3"
+            "act-4"
+            "act-5"
+            "act-6";
     }
     #activities figure img{
         height: 75% !important;
