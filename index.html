@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a8f2f85b52.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="media.css" /><!-- Provisoire -->
+        <link rel="stylesheet" href="media.css" />
     </head>
     <body>
         <nav><!-- Navigation bar - including logo and navigation links -->
@@ -25,7 +25,7 @@
             <div class="search">
                 <button type="button" class="geo-btn"><i class="fas fa-map-marker-alt"></i></button>
                 <input type="text" placeholder="Marseille, France"/>
-                <button type="submit" class="search-btn">Rechercher</button>
+                <button type="submit" class="search-btn"><span>Rechercher</span><i class="fas fa-search"></i></button>
             </div>
             <div class="filters">
                 <p>Filtres</p>
@@ -36,7 +36,9 @@
                     <li><i class="fas fa-dog"></i><p>Animaux autorisés</p></li>
                 </ul>
             </div>
-            <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+            <div class="search-numbers">
+                <i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
         </header>
         <main><!-- Main section - contains search results, activities, etc. -->
             <section id="rooms">

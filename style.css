@@ -24,6 +24,9 @@ h3{
 	font-size: 1rem;
 	margin-bottom: 0.3rem;
 }
+strong{
+	font-weight: 700;
+}
 /* Navigation bar - including logo and navigation links*/
 nav{
 	display: grid;
@@ -44,8 +47,13 @@ nav > a{
 }
 .anchor{
 	border-top: 2px solid transparent;
+	transition: 0.3s;
 }
 .anchor:hover{
+	color: #0065fc;
+	border-top: 2px solid #0065fc;
+}
+.anchor:active{
 	color: #0065fc;
 	border-top: 2px solid #0065fc;
 }
@@ -56,16 +64,6 @@ nav > a{
 /* Header - including search bar and search filters */
 header{
 	padding: 1rem 3rem;
-}
-header p > i{
-	display: inline-block;
-	margin-right: 1rem;
-	margin-top: 1rem;
-	padding: 0.5rem 0.75rem;
-	font-size: smaller;
-	color: #0065fc;
-	border: 1px solid #deebff;
-	border-radius: 60px;
 }
 .search{
 	width: 400px;
@@ -99,9 +97,14 @@ header p > i{
 	background-color: #0065fc;
 	border-radius: 0 10px 10px 0;
 	padding: 0.8rem;
+}
+.search-btn span{
 	font-size: 1.2rem;
 	font-weight: 700;
 	color: white;
+}
+.search-btn i{
+	display: none;
 }
 .filters{
 	font-weight: 700;
@@ -116,15 +119,32 @@ header p > i{
 .filters ul{
 	margin-left: 2rem;
 }
+.filters li:hover{
+	border: 2px solid #0065fc;
+	background-color: #0065fc;
+}
+.filters li:active{
+	border: 2px solid #0065fc;
+	background-color: #0065fc;
+}
 .filters li{
 	display: inline-block;
 	border: 2px solid #deebff;
 	border-radius: 30px;
 	margin-bottom: 1rem;
 	margin-right: 1rem;
+	transition: 0.5s;
 }
 .filters li *{
 	display: inline-block;
+}
+.filters li:hover i{
+	color: #0065fc;
+	background-color: white;
+}
+.filters li:active i{
+	color: #0065fc;
+	background-color: white;
 }
 .filters i{
 	width: 20px;
@@ -134,11 +154,35 @@ header p > i{
 	color: #0065fc;
 	background-color: #deebff;
 	border-radius: 30px;
+	transition: 0.5s;
+}
+.filters li:hover p{
+	color: white;
+}
+.filters li:active p{
+	color: white;
 }
 .filters li p{
 	margin-left: 1rem;
 	margin-right: 1rem;
 	font-weight: 700;
+	transition: 0.3s;
+}
+.search-numbers{
+	display: flex;
+	margin-top: 1rem;
+}
+.search-numbers i{
+	padding: 0.5rem 0.75rem;
+	font-size: smaller;
+	color: #0065fc;
+	border: 1px solid #deebff;
+	border-radius: 60px;
+	height: 12px;
+}
+.search-numbers p{
+	margin-left: 1rem;
+	margin-top: 0.4rem;
 }
 /* Main section - contains search results, activities, etc. */
 main{
@@ -163,6 +207,12 @@ main{
 	grid-template-columns: repeat(3,1fr);
 	margin: 2rem 0;
 }
+.search-results:hover figure:hover img{
+	filter: saturate(1);
+}
+.search-results:hover figure:not(hover) img{
+	filter: saturate(0);
+}
 .search-results figure{
 	height: 200px;
 	border: 5px solid white;
@@ -175,6 +225,7 @@ main{
 	height: 57%;
 	width: 100%;
 	object-fit: cover;
+	transition: 0.5s;
 }
 .search-results figcaption{
 	padding: 0.5rem 1rem;
@@ -202,6 +253,12 @@ aside h2{
 	grid-template-rows: repeat(3,1fr);
 	margin: 2rem 0 0;
 }
+.popular-results:hover figure:hover img{
+	filter: saturate(1);
+}
+.popular-results:hover figure:not(hover) img{
+	filter: saturate(0);
+}
 .popular-results figure{
 	height: 135px;
 	display: grid;
@@ -216,15 +273,13 @@ aside h2{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: 0.5s;
 }
 .popular-results figcaption{
 	margin: 1rem;
 }
 .popular-results p{
 	font-size: 0.8rem;
-}
-.popular-results .rating{
-	margin-top: 2rem;
 }
 .rating > .blue{
 	color: #0065fc;
@@ -246,7 +301,13 @@ aside h2{
 	grid-template-areas: 
 		"act-1 act-2 act-4 act-5"
 		"act-1 act-2 act-4 act-5"
+		"act-1 act-2 act-4 act-5"
+		"act-1 act-2 act-4 act-5"
+		"act-1 act-2 act-4 act-5"
 		"act-1 act-2 act-4 act-6"
+		"act-1 act-3 act-4 act-6"
+		"act-1 act-3 act-4 act-6"
+		"act-1 act-3 act-4 act-6"
 		"act-1 act-3 act-4 act-6"
 		"act-1 act-3 act-4 act-6";
 }
@@ -256,36 +317,52 @@ aside h2{
 	overflow: hidden;
 	box-shadow: 0px 10px 10px #f2f2f2;
 }
+#activities:hover figure:hover img{
+	filter: saturate(1);
+}
+#activities:hover figure:not(hover) img{
+	filter: saturate(0);
+}
 #act-1{
 	grid-area: act-1;
+}
+#act-1 img{
+	height: 85%;
 }
 #act-2{
 	grid-area: act-2;
 }
+#act-2 img{
+	height: 71%;
+}
 #act-3{
 	grid-area: act-3;
+}
+#act-3 img{
+	height: 64%;
 }
 #act-4{
 	grid-area: act-4;
 }
+#act-4 img{
+	height: 85%;
+}
 #act-5{
 	grid-area: act-5;
+}
+#act-5 img{
+	height: 65%;
 }
 #act-6{
 	grid-area: act-6;
 }
-.small img{
-	height: 60%;
-}
-.medium img{
-	height: 75%;
-}
-.large img{
-	height: 86%;
+#act-6 img{
+	height: 70%;
 }
 #activities img{
 	width: 100%;
 	object-fit: cover;
+	transition: 0.5s;
 }
 #activities figcaption{
 	padding: 1rem;
