@@ -21,7 +21,7 @@ h2{
 	margin-bottom: 1rem;
 }
 h3{
-	font-size: 1rem;
+	font-size: 1.1rem;
 	margin-bottom: 0.3rem;
 }
 a{
@@ -218,7 +218,7 @@ main{
 .search-results figure{
 	height: 200px;
 	display: grid;
-	grid-template-rows: 60% 40%;
+	grid-template-rows: 50% 1fr;
 	border: 5px solid white;
 	border-radius: 20px;
 	background-color: white;
@@ -228,14 +228,27 @@ main{
 .search-results img{
 	height: 100%;
 	width: 100%;
+	aspect-ratio: 16/9;
 	object-fit: cover;
 	transition: 0.5s;
 }
 .search-results figcaption{
-	padding: 0.5rem 1rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .search-results p{
-	font-size: 0.8rem;
+	font-size: 0.9rem;
+}
+.search-results i{
+	font-size: 0.9rem;
+}
+.search-results .blue{
+	color: #0065fc;
+}
+.search-results .grey{
+	color: #deebff;
 }
 aside{
 	flex-basis: 25%;
@@ -263,7 +276,7 @@ aside h2{
 .popular-results figure{
 	height: 135px;
 	display: grid;
-	grid-template-columns: 40% 60%;
+	grid-template-columns: 1fr 2fr;
 	border: 5px solid white;
 	border-radius: 20px;
 	background-color: white;
@@ -273,19 +286,26 @@ aside h2{
 .popular-results img{
 	width: 100%;
 	height: 100%;
+	aspect-ratio: 16/9;
 	object-fit: cover;
 	transition: 0.5s;
 }
 .popular-results figcaption{
 	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .popular-results p{
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 }
-.rating > .blue{
+.popular-results i{
+	font-size: 0.9rem;
+}
+.popular-results .blue{
 	color: #0065fc;
 }
-.rating > .grey{
+.popular-results .grey{
 	color: #deebff;
 }
 #activities{
