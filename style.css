@@ -24,6 +24,10 @@ h3{
 	font-size: 1rem;
 	margin-bottom: 0.3rem;
 }
+a{
+	color: black;
+	text-decoration: none;
+}
 strong{
 	font-weight: 700;
 }
@@ -42,8 +46,6 @@ nav > a{
 	display: inline-block;
 	text-align: center;
 	padding: 3rem 0 0;
-	color: black;
-	text-decoration: none;
 }
 .anchor{
 	border-top: 2px solid transparent;
@@ -215,6 +217,8 @@ main{
 }
 .search-results figure{
 	height: 200px;
+	display: grid;
+	grid-template-rows: 60% 40%;
 	border: 5px solid white;
 	border-radius: 20px;
 	background-color: white;
@@ -222,7 +226,7 @@ main{
 	box-shadow: 0px 5px 10px gainsboro;
 }
 .search-results img{
-	height: 57%;
+	height: 100%;
 	width: 100%;
 	object-fit: cover;
 	transition: 0.5s;
@@ -232,9 +236,6 @@ main{
 }
 .search-results p{
 	font-size: 0.8rem;
-}
-.search-results .rating{
-	margin-top: 0.4rem;
 }
 aside{
 	flex-basis: 25%;
@@ -375,7 +376,7 @@ footer{
 }
 footer ul{
 	display: inline-block;
-	width: 33%;
+	width: 30%;
 	vertical-align: top;
 }
 footer li{
