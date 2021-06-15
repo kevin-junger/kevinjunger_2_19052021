@@ -11,6 +11,8 @@
     }
     .search-results figure{
         height: 250px;
+    }
+    .search-results a{
         grid-template-rows: 60% 1fr;
     }
     .popular-results{
@@ -32,6 +34,8 @@
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2;
+    }
+    .popular-results figure:first-child a{
         grid-template-columns: auto;
         grid-template-rows: 67% 1fr;
     }
@@ -151,11 +155,13 @@
         grid-template-columns: auto;
     }
     .popular-results figure:first-child{
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto;
         height: 135px;
         grid-row-start: 1;
         grid-row-end: 2;
+    }
+    .popular-results figure:first-child a{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
     }
     .popular-results h3{
         font-size: 1.2rem;
@@ -167,8 +173,9 @@
         grid-template-rows: repeat(6,1fr);
     }
     .search-results figure{
-        height: 300px;
-        display: grid;
+        height: 290px;
+    }
+    .search-results a{
         grid-template-rows: 65% 1fr;
     }
     #activities article{
