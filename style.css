@@ -21,8 +21,8 @@ h2{
 	margin-bottom: 1rem;
 }
 h3{
-	font-size: 1.1rem;
-	margin-bottom: 0.3rem;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
 }
 a{
 	color: black;
@@ -214,7 +214,6 @@ aside h2{
 	background-color: white;
 	overflow: hidden;
 	box-shadow: 0px 5px 10px gainsboro;
-
 }
 figure{
 	display: grid;
@@ -371,10 +370,10 @@ footer li:nth-child(1){
     aside{
         order: 1;
     }
-    .search-results figure{
+    .search-results .cards{
         height: 250px;
     }
-    .search-results a{
+    .search-results figure{
         grid-template-rows: 60% 1fr;
     }
     .popular-results{
@@ -390,14 +389,14 @@ footer li:nth-child(1){
         grid-template-rows: repeat(2,1fr);
         grid-template-columns: repeat(2,1fr);
     }
-    .popular-results figure:first-child{
+    .popular-results .cards:first-child{
         height: 306px;
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2;
     }
-    .popular-results figure:first-child a{
+    .popular-results .cards:first-child figure{
         grid-template-columns: auto;
         grid-template-rows: 67% 1fr;
     }
@@ -407,7 +406,7 @@ footer li:nth-child(1){
             "act-1 act-2 act-3"
             "act-4 act-5 act-6";
     }
-    #activities a{
+    #activities figure{
         grid-template-rows: 76% 1fr;
     }
 }
@@ -450,7 +449,7 @@ footer li:nth-child(1){
             "act-3 act-4"
             "act-5 act-6";
     }
-    #activities a{
+    #activities figure{
         grid-template-rows: 74% 1fr;
     }
     footer{
@@ -515,17 +514,14 @@ footer li:nth-child(1){
         grid-template-rows: repeat(3,1fr);
         grid-template-columns: auto;
     }
-    .popular-results figure:first-child{
+    .popular-results .cards:first-child{
         height: 135px;
         grid-row-start: 1;
         grid-row-end: 2;
     }
-    .popular-results figure:first-child a{
+    .popular-results .cards:first-child figure{
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
-    }
-    .popular-results h3{
-        font-size: 1.2rem;
     }
 }
 @media screen and (max-width: 600px) {
@@ -533,10 +529,10 @@ footer li:nth-child(1){
         grid-template-columns: auto;
         grid-template-rows: repeat(6,1fr);
     }
-    .search-results figure{
+    .search-results .cards{
         height: 290px;
     }
-    .search-results a{
+    .search-results figure{
         grid-template-rows: 65% 1fr;
     }
     #activities article{
@@ -549,12 +545,17 @@ footer li:nth-child(1){
             "act-5"
             "act-6";
     }
-    #activities a{
+    #activities figure{
         grid-template-rows: 76% 1fr;
     }
 }
-@media screen and (max-width: 425px){
-    .popular-results figure{
+@media screen and (max-width: 375px){
+    .popular-results .cards{
+	    height: 160px !important;
+    }
+}
+@media screen and (max-width: 320px){
+    .popular-results .cards{
 	    height: 170px !important;
     }
 }
