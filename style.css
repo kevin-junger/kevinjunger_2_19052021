@@ -188,14 +188,14 @@ main{
     justify-content: space-between;
 	padding: 0 3rem;
 }
-main * article{
+article{
 	display: grid;
 	gap: 1.8rem;
 }
-main * article:hover figure:hover img{
+article:hover figure:hover img{
     filter: saturate(1);
 }
-main * article:hover figure:not(hover) img{
+article:hover figure:not(hover) img{
     filter: saturate(0);
 }
 aside{
@@ -209,13 +209,14 @@ aside h2{
 	display: flex;
 	justify-content: space-between;
 }
-figure{
+.cards{
 	border-radius: 20px;
 	background-color: white;
 	overflow: hidden;
 	box-shadow: 0px 5px 10px gainsboro;
+
 }
-figure a{
+figure{
 	display: grid;
     height: 100%;
 }
@@ -250,11 +251,11 @@ figcaption p+i{
 	grid-template-columns: repeat(3,1fr);
 	margin: 2rem 0;
 }
-.search-results figure{
+.search-results .cards{
 	height: 200px;
 	border: 5px solid white;
 }
-.search-results a{
+.search-results figure{
 	grid-template-rows: 50% 1fr;
 }
 .search-results img{
@@ -269,11 +270,11 @@ figcaption p+i{
 	grid-template-rows: repeat(3,1fr);
 	margin: 2rem 0 0;
 }
-.popular-results figure{
+.popular-results .cards{
 	height: 135px;
 	border: 5px solid white;
 }
-.popular-results a{
+.popular-results figure{
 	grid-template-columns: 1fr 2fr;
 }
 .popular-results img{
@@ -301,37 +302,37 @@ figcaption p+i{
 #act-1{
 	grid-area: act-1;
 }
-#act-1 a{
+#act-1 figure{
 	grid-template-rows: 86% 1fr;
 }
 #act-2{
 	grid-area: act-2;
 }
-#act-2 a{
+#act-2 figure{
 	grid-template-rows: 73% 1fr;
 }
 #act-3{
 	grid-area: act-3;
 }
-#act-3 a{
+#act-3 figure{
 	grid-template-rows: 66% 1fr;
 }
 #act-4{
 	grid-area: act-4;
 }
-#act-4 a{
+#act-4 figure{
 	grid-template-rows: 86% 1fr;
 }
 #act-5{
 	grid-area: act-5;
 }
-#act-5 a{
+#act-5 figure{
 	grid-template-rows: 66% 1fr;
 }
 #act-6{
 	grid-area: act-6;
 }
-#act-6 a{
+#act-6 figure{
 	grid-template-rows: 73% 1fr;
 }
 .blue{
