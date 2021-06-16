@@ -35,9 +35,7 @@ strong{
 nav{
 	display: grid;
 	grid-template-columns: 1fr 150px 150px 150px;
-	padding-bottom: 1rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding-bottom: 2rem;
 }
 svg{
 	padding-top: 2rem;
@@ -62,10 +60,11 @@ nav > a{
 #signup{
 	font-weight: 700;
 	color: #0065fc;
+    margin-top: 2px;
 }
 /* Header - including search bar and search filters */
 header{
-	padding: 1rem 3rem;
+	padding: 0 3rem 1rem 3rem;
 }
 .search{
 	width: 400px;
@@ -413,11 +412,10 @@ footer li:nth-child(1){
 }
 @media screen and (max-width: 1024px){
     nav{
-        padding-left: 2rem;
         padding-right: 0;
     }
     header{
-        padding: 1rem 2rem;
+        padding: 0 2rem 1rem 2rem;
     }
     .filters{
         flex-direction: column;
@@ -464,7 +462,7 @@ footer li:nth-child(1){
 }
 @media screen and (max-width: 768px){
     nav{
-        padding: 0 0 1rem 0;
+        margin: 0 -2rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
