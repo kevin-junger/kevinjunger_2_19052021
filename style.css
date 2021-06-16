@@ -21,8 +21,8 @@ h2{
 	margin-bottom: 1rem;
 }
 h3{
-	font-size: 1.1rem;
-	margin-bottom: 0.3rem;
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
 }
 a{
 	color: black;
@@ -35,9 +35,7 @@ strong{
 nav{
 	display: grid;
 	grid-template-columns: 1fr 150px 150px 150px;
-	padding-bottom: 1rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding-bottom: 2rem;
 }
 svg{
 	padding-top: 2rem;
@@ -62,10 +60,11 @@ nav > a{
 #signup{
 	font-weight: 700;
 	color: #0065fc;
+    margin-top: 2px;
 }
 /* Header - including search bar and search filters */
 header{
-	padding: 1rem 3rem;
+	padding: 0 3rem 1rem 3rem;
 }
 .search{
 	width: 400px;
@@ -189,14 +188,14 @@ main{
     justify-content: space-between;
 	padding: 0 3rem;
 }
-main * article{
+article{
 	display: grid;
 	gap: 1.8rem;
 }
-main * article:hover figure:hover img{
+article:hover figure:hover img{
     filter: saturate(1);
 }
-main * article:hover figure:not(hover) img{
+article:hover figure:not(hover) img{
     filter: saturate(0);
 }
 aside{
@@ -210,13 +209,13 @@ aside h2{
 	display: flex;
 	justify-content: space-between;
 }
-figure{
+.cards{
 	border-radius: 20px;
 	background-color: white;
 	overflow: hidden;
 	box-shadow: 0px 5px 10px gainsboro;
 }
-figure a{
+figure{
 	display: grid;
     height: 100%;
 }
@@ -251,11 +250,11 @@ figcaption p+i{
 	grid-template-columns: repeat(3,1fr);
 	margin: 2rem 0;
 }
-.search-results figure{
+.search-results .cards{
 	height: 200px;
 	border: 5px solid white;
 }
-.search-results a{
+.search-results figure{
 	grid-template-rows: 50% 1fr;
 }
 .search-results img{
@@ -270,11 +269,11 @@ figcaption p+i{
 	grid-template-rows: repeat(3,1fr);
 	margin: 2rem 0 0;
 }
-.popular-results figure{
+.popular-results .cards{
 	height: 135px;
 	border: 5px solid white;
 }
-.popular-results a{
+.popular-results figure{
 	grid-template-columns: 1fr 2fr;
 }
 .popular-results img{
@@ -302,37 +301,37 @@ figcaption p+i{
 #act-1{
 	grid-area: act-1;
 }
-#act-1 a{
+#act-1 figure{
 	grid-template-rows: 86% 1fr;
 }
 #act-2{
 	grid-area: act-2;
 }
-#act-2 a{
+#act-2 figure{
 	grid-template-rows: 73% 1fr;
 }
 #act-3{
 	grid-area: act-3;
 }
-#act-3 a{
+#act-3 figure{
 	grid-template-rows: 66% 1fr;
 }
 #act-4{
 	grid-area: act-4;
 }
-#act-4 a{
+#act-4 figure{
 	grid-template-rows: 86% 1fr;
 }
 #act-5{
 	grid-area: act-5;
 }
-#act-5 a{
+#act-5 figure{
 	grid-template-rows: 66% 1fr;
 }
 #act-6{
 	grid-area: act-6;
 }
-#act-6 a{
+#act-6 figure{
 	grid-template-rows: 73% 1fr;
 }
 .blue{
@@ -371,10 +370,10 @@ footer li:nth-child(1){
     aside{
         order: 1;
     }
-    .search-results figure{
+    .search-results .cards{
         height: 250px;
     }
-    .search-results a{
+    .search-results figure{
         grid-template-rows: 60% 1fr;
     }
     .popular-results{
@@ -390,14 +389,14 @@ footer li:nth-child(1){
         grid-template-rows: repeat(2,1fr);
         grid-template-columns: repeat(2,1fr);
     }
-    .popular-results figure:first-child{
+    .popular-results .cards:first-child{
         height: 306px;
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 2;
     }
-    .popular-results figure:first-child a{
+    .popular-results .cards:first-child figure{
         grid-template-columns: auto;
         grid-template-rows: 67% 1fr;
     }
@@ -407,17 +406,16 @@ footer li:nth-child(1){
             "act-1 act-2 act-3"
             "act-4 act-5 act-6";
     }
-    #activities a{
+    #activities figure{
         grid-template-rows: 76% 1fr;
     }
 }
 @media screen and (max-width: 1024px){
     nav{
-        padding-left: 2rem;
         padding-right: 0;
     }
     header{
-        padding: 1rem 2rem;
+        padding: 0 2rem 1rem 2rem;
     }
     .filters{
         flex-direction: column;
@@ -451,7 +449,7 @@ footer li:nth-child(1){
             "act-3 act-4"
             "act-5 act-6";
     }
-    #activities a{
+    #activities figure{
         grid-template-rows: 74% 1fr;
     }
     footer{
@@ -464,7 +462,7 @@ footer li:nth-child(1){
 }
 @media screen and (max-width: 768px){
     nav{
-        padding: 0 0 1rem 0;
+        margin: 0 -2rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
@@ -516,17 +514,14 @@ footer li:nth-child(1){
         grid-template-rows: repeat(3,1fr);
         grid-template-columns: auto;
     }
-    .popular-results figure:first-child{
+    .popular-results .cards:first-child{
         height: 135px;
         grid-row-start: 1;
         grid-row-end: 2;
     }
-    .popular-results figure:first-child a{
+    .popular-results .cards:first-child figure{
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
-    }
-    .popular-results h3{
-        font-size: 1.2rem;
     }
 }
 @media screen and (max-width: 600px) {
@@ -534,10 +529,10 @@ footer li:nth-child(1){
         grid-template-columns: auto;
         grid-template-rows: repeat(6,1fr);
     }
-    .search-results figure{
+    .search-results .cards{
         height: 290px;
     }
-    .search-results a{
+    .search-results figure{
         grid-template-rows: 65% 1fr;
     }
     #activities article{
@@ -550,12 +545,17 @@ footer li:nth-child(1){
             "act-5"
             "act-6";
     }
-    #activities a{
+    #activities figure{
         grid-template-rows: 76% 1fr;
     }
 }
-@media screen and (max-width: 425px){
-    .popular-results figure{
+@media screen and (max-width: 375px){
+    .popular-results .cards{
+	    height: 160px !important;
+    }
+}
+@media screen and (max-width: 320px){
+    .popular-results .cards{
 	    height: 170px !important;
     }
 }
