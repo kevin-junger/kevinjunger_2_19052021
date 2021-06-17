@@ -22,7 +22,7 @@ h2{
 }
 h3{
 	font-size: 1rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.3rem;
 }
 a{
 	color: black;
@@ -72,14 +72,16 @@ header{
 	margin-top: 1.5rem;
 	margin-bottom: 1.5rem;
 }
+.search *{
+	font-size: 1rem;
+	font-weight: 700;
+}
 .search input{
 	width: 100%;
 	border: 1px solid #f2f2f2;
 	border-left: none;
 	border-right: none;
 	padding: 0.8rem;
-	font-size: 1.2rem;
-	font-weight: 700;
 	color: black;
 }
 .search input::placeholder{
@@ -90,8 +92,6 @@ header{
 	background-color: #f2f2f2;
 	border-radius: 10px 0 0 10px;
 	padding: 0.8rem;
-	font-size: 1.2rem;
-	font-weight: 700;
 }
 .search-btn{
 	border: 1px solid #0065fc;
@@ -100,8 +100,6 @@ header{
 	padding: 0.8rem;
 }
 .search-btn span{
-	font-size: 1.2rem;
-	font-weight: 700;
 	color: white;
 }
 .search-btn i{
@@ -350,7 +348,7 @@ footer li{
 	list-style: none;
 	margin-bottom: 1rem;
 }
-footer li:nth-child(1){
+footer li:nth-child(1) a{
 	font-weight: 700;
 	margin-bottom: 1.5rem;
 }
@@ -501,8 +499,6 @@ footer li:nth-child(1){
     }
     .search-btn i{
         display: inline-block;
-        font-size: 1.2rem;
-        font-weight: 700;
         color: white;
     }
     .popular-results{
